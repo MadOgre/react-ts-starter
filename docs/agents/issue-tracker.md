@@ -7,6 +7,7 @@ Some skills name `.scratch/<feature-slug>/` as the home of local issue files. In
 ## Conventions
 
 - One feature per directory: `docs/planning/<feature-slug>/`
+- The feature slug is the feature name the developer gives, lowercased, with every run of characters other than `a-z` and `0-9` turned into one hyphen and no hyphen at either end: "Mantine install" → `mantine-install`. When a folder for the same feature already exists under another spelling, ask the developer before creating a second one.
 - Every feature folder holds an `INTENT.md`: see [The intent document](#the-intent-document)
 - Grilling rounds are `docs/planning/<feature-slug>/round_<N>_questions.md`, numbered from `1`
 - The spec is `docs/planning/<feature-slug>/spec.md`
