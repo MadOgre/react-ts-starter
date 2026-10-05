@@ -14,6 +14,10 @@ Single-context: `CONTEXT.md` + `docs/adr/` at the repo root. See `docs/agents/do
 
 ## Working rules
 
+### Workflow
+
+A feature moves through `INTENT.md` → `/grill-with-docs` → `/to-spec` → `/to-tickets` → `/implement`, one stage at a time. The developer starts each stage; finish the current one and wait for them to start the next. `/implement` reviews with `/code-review`, and its commit follows Review until clean below. Prompt the developer to clear the context and to review the spec and tickets manually when running implement.
+
 ### Keep the build green
 
 Before every commit, run `pnpm install`, `pnpm lint`, `pnpm build` and a short `pnpm dev` start with the same `pnpm` and Node the developer uses. Commit only when all of them pass: chain the checks and the commit with `&&`.
